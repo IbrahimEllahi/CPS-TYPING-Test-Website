@@ -1,4 +1,3 @@
-
 function CPS_Test(time){
   
   class CPS{
@@ -35,9 +34,8 @@ async function repeat(num, func, delay){
 
   for (let i = num; i > 1 || num == 0; i--){
 
-    await new Promise(resolve => setTimeout(resolve, delay));
-    func()
-
+    await new Promise((resolve,reject) => setTimeout(()=>{func();resolve()}, delay));
+    
   }
 
 }
@@ -88,14 +86,3 @@ function timer(){
   repeat(test.duration*10+1, update, 100)
   
 }
-
-
-
-
-
-var r_color = () => '#' + Math.floor(Math.random()*16777215).toString(16)
-
-
-
-
-
