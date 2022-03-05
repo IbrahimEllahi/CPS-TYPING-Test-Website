@@ -1,4 +1,4 @@
-# CPS-Website-Tester
+# CPS/TYPING TEST Website
 
 <br>
 
